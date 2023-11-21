@@ -2,10 +2,10 @@
  Alice wants to minimize the total number of candies she must buy.'''
 
 def candies(n, arr):
-    result=[1 for i in range(n)]
+    result=[1 for i in range(n)] #giving 1 candi to each person
     for i in range(1,n):
         if(arr[i]>arr[i-1]):
-            result[i]=result[i-1]+1
+            result[i]=result[i-1]+1 #adding one extra candi from the previous person if the next person has a higher score
     print(result)
     for i in range(n-1,0,-1):
         if(arr[i-1]>arr[i] and result[i-1]<=result[i]):
